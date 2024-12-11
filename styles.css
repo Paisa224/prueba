@@ -1,0 +1,66 @@
+/* Reset básico */
+body, h1, h2, p, ul, li, nav, section, header, footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Estilo del encabezado */
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo del contenido principal */
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #e9ecef;
+    border-radius: 5px;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo del pie de página */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #343a40;
+    color: #fff;
+    margin-top: 2rem;
+}

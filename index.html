@@ -3,56 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Práctica HTML y CSS</title>
+    <title>Página Moderna e Interactiva</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Bienvenido a mi página</h1>
+        <h1>Explora mi Página</h1>
         <nav>
             <ul>
-                <li><a href="https://www.google.com/">Sección 1</a></li>
-                <li><a href="https://www.facebook.com/">Sección 2</a></li>
-                <li><a href="https://www.instagram.com/">Sección 3</a></li>
-                <li><a href="https://www.github.com/">Sección 4</a></li>
-                <li><a href="https://www.youtube.com/">Sección 5</a></li>
-                <li><a href="https://x.com/__x">Sección 6</a></li>
-
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="aboutme.html">Sobre mí</a></li>
+                <li><a href="proyectos.html">Proyecto</a></li>
+                <li><a href="#section4">Galería</a></li>
+                <li><a href="#section5">Contacto</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section id="Explicacion de la primer seccion">
-            <h2>Ingreso a Google</h2>
-            <p>Si entras en la seccion 1 te va a enviar al buscador de google.</p>
+        <section id="section1" class="hero">
+            <h2>Bienvenido</h2>
+            <p>Descubre contenido interactivo, moderno y elegante.</p>
+            <button id="exploreButton">Explorar</button>
         </section>
+
         <section id="section2">
-            <h2>Sección 2</h2>
-            <p>Este es el contenido de la segunda sección.</p>
-        </section>
-        <section id="section3">
-            <h2>Sección 3</h2>
-            <p>Este es el contenido de la tercera sección.</p>
-        </section>
-        <section id="section4">
-            <h2>Sección 4</h2>
-            <p>Este es el contenido de la cuarta sección.</p>
-        </section>
-        <section id="section5">
-            <h2>Sección 5</h2>
-            <p>si entras en la seccion 5 te va enviar a youtube</p>
-        </section>
-        <section id="seccion6">
-            <h2>Sección 6</h2>
-            <p>si entras en la seccion 6 te va enviar  a X</p>
+            <h2>Sobre mí</h2>
+            <p>Me llamo Juan Manuel. Me apasiona el desarrollo web y las experiencias interactivas.</p>
         </section>
 
+        <section id="section3" class="projects">
+            <h2>Proyectos</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Proyecto 1</h3>
+                    <p>Una descripción breve del proyecto.</p>
+                </div>
+                <div class="card">
+                    <h3>Proyecto 2</h3>
+                    <p>Una descripción breve del proyecto.</p>
+                </div>
+                <div class="card">
+                    <h3>Proyecto 3</h3>
+                    <p>Una descripción breve del proyecto.</p>
+                </div>
+            </div>
+        </section>
 
+        <section id="section4" class="gallery">
+            <h2>Galería</h2>
+            <div class="image-gallery">
+                <img src="https://via.placeholder.com/150" alt="Imagen 1">
+                <img src="https://via.placeholder.com/150" alt="Imagen 2">
+                <img src="https://via.placeholder.com/150" alt="Imagen 3">
+            </div>
+        </section>
 
-
+        <section id="section5" class="contact">
+            <h2>Contacto</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu correo" required>
+                <textarea placeholder="Tu mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
     </main>
+
     <footer>
+         <button onclick="apagarPC()">Apagar PC</button>
         <p>&copy; 2024 Juan Manuel. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Función para apagar la PC
+        function apagarPC() {
+            const confirmar = confirm("¿Estás seguro de que deseas apagar la PC?");
+            if (!confirmar) return;
+
+            // Realiza la solicitud al servidor
+            fetch("http://localhost:3000/apagar")
+                .then((response) => {
+                    if (response.ok) {
+                        alert("La PC se apagará en breve.");
+                    } else {
+                        alert("Hubo un problema al intentar apagar la PC.");
+                    }
+                })
+                .catch((error) => {
+                    console.error("Error al enviar la solicitud:", error);
+                    alert("No se pudo comunicar con el servidor.");
+                });
+        }
+    </script>
 </body>
 </html>

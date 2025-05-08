@@ -42,4 +42,14 @@ Aplicación de consumo de productos desde la API de [FakeStore](https://fakestor
 
 ## 📂 Estructura de carpetas
 
-<pre><code>```bash src/ ├── api/ # Llamadas a la API externa ├── components/ # Componentes reutilizables ├── features/ │ ├── auth/ # Login y auth store │ └── products/ # Product list, details y store ├── pages/ # Rutas protegidas ├── App.tsx # Routing principal └── main.tsx # Entry point ```</code></pre>
+```bash
+src/
+├── api/         # Llamadas a la API externa
+├── components/  # Componentes reutilizables
+├── features/
+│   ├── auth/     # Login y auth store
+│   └── products/ # Product list, details y store
+├── pages/       # Rutas protegidas
+├── App.tsx      # Routing principal
+└── main.tsx     # Entry point
+
